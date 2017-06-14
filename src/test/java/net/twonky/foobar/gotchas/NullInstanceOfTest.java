@@ -1,4 +1,4 @@
-package net.twonky.foobar.gotcha;
+package net.twonky.foobar.gotchas;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
