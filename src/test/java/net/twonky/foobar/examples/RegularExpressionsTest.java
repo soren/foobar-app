@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 import org.junit.Test;
 
-public class RegularExpressions {
+public class RegularExpressionsTest {
 
 	@Test
 	public void basicMatching() {
@@ -24,11 +24,11 @@ public class RegularExpressions {
 		assertFalse(p.matcher(s).matches());
 		assertTrue(p.matcher(s).find());
 
-		RegEx re = RegEx.build("ABC");
+		RegExTest re = RegExTest.build("ABC");
 		assertTrue(re.m(s));
-		assertTrue(RegEx.build("ABC").m(s));
-		assertTrue(RegEx.build("^abc").m(s));
-		assertFalse(RegEx.build("^abcabc").m(s));
+		assertTrue(RegExTest.build("ABC").m(s));
+		assertTrue(RegExTest.build("^abc").m(s));
+		assertFalse(RegExTest.build("^abcabc").m(s));
 	}
 
 	@Test
@@ -50,7 +50,7 @@ public class RegularExpressions {
 		assertEquals("01", m.group("month"));
 		assertEquals("19", m.group("day"));
 
-		RegEx re = RegEx.build("(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})");
+		RegExTest re = RegExTest.build("(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})");
 		assertTrue(re.m(s));
 		assertEquals("19", re.group("day"));
 	}

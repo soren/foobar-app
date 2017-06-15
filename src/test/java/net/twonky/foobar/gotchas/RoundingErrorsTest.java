@@ -5,7 +5,7 @@ import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Test;
 
-public class RoundingErrors {
+public class RoundingErrorsTest {
 
 	@Test
 	public void roundingErrors() {

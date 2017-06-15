@@ -3,16 +3,16 @@ package net.twonky.foobar.examples;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegEx {
+public class RegExTest {
 	private final Pattern pattern;
 	private Matcher matcher;
 
-	private RegEx(String regex) {
+	private RegExTest(String regex) {
 		pattern = Pattern.compile(regex);
 	}
 
-	public static RegEx build(String regex) {
-		return new RegEx(regex);
+	public static RegExTest build(String regex) {
+		return new RegExTest(regex);
 	}
 
 	public boolean m(String s) {
